@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../fonts/OpenSans-Regular.eot");
+    src: url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.svg#filename") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url("../fonts/OpenSans-Bold.eot");
+    src: url("../fonts/OpenSans-Bold.woff") format("woff"),
+    url("../fonts/OpenSans-Bold.svg#filename") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.start-screen h1{
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 111px);
+}
+
+.start-screen #brew{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 84px);
+}
+
+#brew{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: #e95e3f;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.beer-grid{
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.grid-element{
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.element-img{
+    border: 1px solid #000;
+    height: 200px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.element-img img{
+    max-height: 100%;
+}
+
+.element-text{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.beer-name{
+    font-weight: 700;
+}
+
+.beer-abv{
+    padding-left: 20px;
+}
+
+@media screen and (min-width: 1921px){
+    .beer-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .beer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .beer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 425px){
+    .beer-grid {
+        grid-template-columns: 1fr;
+    }
+}
